@@ -1,0 +1,36 @@
+=== AniCut Studio ===
+
+To share this website with friends:
+
+Option 1: Quick Share (ngrok)
+  1. Download ngrok: https://ngrok.com/download
+  2. Unzip and run: ngrok http 3001
+  3. Share the https://xxxx.ngrok-free.app URL
+     Your friends can open it in any browser.
+
+Option 2: Deploy to Cloud (permanent URL)
+  1. Push ai-clip-studio to GitHub
+  2. Backend to Render.com (free):
+     - Render.com -> New Web Service
+     - Root Directory: apps/server
+     - Build: pnpm install && pnpm run build
+     - Start: node dist/apps/server/src/main.js
+     - Env: DATABASE_URL=file:./prisma/dev.db
+  3. Frontend to Vercel.com (free):
+     - Vercel.com -> Import GitHub repo
+     - Root Directory: apps/web
+     - Framework: Vite
+     - Build: pnpm build
+     - Output: dist
+  4. Done - you have a permanent URL!
+
+Option 3: Quick Test (npm)
+  Run this in terminal: npx localtunnel --port 3001
+
+=== Local Access ===
+  Start: double-click start.bat
+  Open: http://localhost:5173
+  API:  http://localhost:3001/api/docs
+
+Tip: Before sharing, make sure the backend is running.
+Run: cd apps/server && pnpm run dev
