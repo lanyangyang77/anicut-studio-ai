@@ -1,16 +1,12 @@
 {
-  "name": "ai-clip-studio",
-  "version": "0.1.0",
+  "name": "anicut-studio",
   "private": true,
   "scripts": {
     "dev": "pnpm --parallel -r run dev",
-    "dev:web": "pnpm --filter @ai-clip/web run dev",
-    "dev:server": "pnpm --filter @ai-clip/server run dev",
     "build": "pnpm --parallel -r run build",
-    "build:shared": "pnpm --filter @ai-clip/shared run build",
-    "build:web": "pnpm --filter @ai-clip/web run build",
-    "build:server": "pnpm --filter @ai-clip/server run build",
-    "format": "prettier --write \"**/*.{ts,tsx,json,css,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,json,css,md}\"",
+    "deploy:build": "cd apps/server && npx prisma generate && npx nest build",
+    "deploy:start": "node apps/server/dist/apps/server/src/main.js"
   },
   "engines": {
     "node": ">=18.0.0",
