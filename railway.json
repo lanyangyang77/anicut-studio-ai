@@ -1,1 +1,1 @@
-{"build":{"builder":"NIXPACKS"},"deploy":{"numReplicas":1,"startCommand":"node dist/apps/server/src/main.js","healthcheckPath":"/api/v1/templates/built-in"}}
+{"build":{"builder":"NIXPACKS"},"deploy":{"numReplicas":1,"buildCommand":"npm run deploy:build","startCommand":"npm run deploy:start"}}
