@@ -14,7 +14,7 @@
                     "prisma:dbpush":  "prisma db push"
                 },
     "dependencies":  {
-                         "@ai-clip/shared":  "workspace:*",
+                         "@ai-clip/shared": "file:../../packages/shared",
                          "@nestjs/common":  "^11.0.0",
                          "@nestjs/config":  "^4.0.0",
                          "@nestjs/core":  "^11.0.0",
